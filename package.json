@@ -1,0 +1,46 @@
+{
+  "name": "tabby-gcp-iap",
+  "version": "1.0.0",
+  "description": "GCP IAP SSH tunnel plugin for Tabby — no gcloud binary required at runtime",
+  "author": "mz",
+  "license": "MIT",
+  "keywords": [
+    "tabby-plugin",
+    "tabby",
+    "gcp",
+    "iap",
+    "ssh",
+    "google-cloud"
+  ],
+  "main": "dist/index.js",
+  "files": [
+    "dist/",
+    "scripts/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "webpack --progress --color",
+    "watch": "webpack --progress --color --watch",
+    "install-plugin": "node scripts/install-plugin.js",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "tabby-core": "*"
+  },
+  "devDependencies": {
+    "@angular/common": "^15",
+    "@angular/core": "^15",
+    "@angular/forms": "^15",
+    "@types/ssh2": "^1.15.5",
+    "@types/ws": "^8.18.1",
+    "node-loader": "^2.1.0",
+    "ts-loader": "^9",
+    "typescript": "~4.9",
+    "webpack": "^5",
+    "webpack-cli": "^5"
+  },
+  "dependencies": {
+    "ssh2": "^1.17.0",
+    "ws": "^8.21.0"
+  }
+}
