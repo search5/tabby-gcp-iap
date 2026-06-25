@@ -7,8 +7,9 @@ A [Tabby](https://tabby.sh) plugin that connects to Google Cloud Platform VM ins
 The plugin implements the full IAP tunnel protocol natively:
 
 1. **Auth** — Reads `~/.config/gcloud/application_default_credentials.json` and refreshes an OAuth2 access token directly via the Google token endpoint (no `gcloud` binary).
-2. **Tunnel** — Opens a WebSocket connection to `tunnel.cloudproxy.app` using the [`ws`](https://github.com/websockets/ws) package and speaks the IAP relay subprotocol (`relay.tunnel.cloudproxy.app`) including binary framing (DATA / ACK / SID frames).
-3. **SSH** — Runs SSH over the tunnel stream using the [`ssh2`](https://github.com/mscdex/ssh2) package and opens an interactive shell.
+2. **Key management** — Generates `~/.ssh/google_compute_engine` if it does not exist, then registers the public key with the GCP project via the Compute Engine API using the same temporary-key format as `gcloud` (10-minute expiry, `google-ssh` JSON comment). OS Login is detected automatically.
+3. **Tunnel** — Opens a WebSocket connection to `tunnel.cloudproxy.app` using the [`ws`](https://github.com/websockets/ws) package and speaks the IAP relay subprotocol (`relay.tunnel.cloudproxy.app`) including binary framing (DATA / ACK / SID frames).
+4. **SSH** — Runs SSH over the tunnel stream using the [`ssh2`](https://github.com/mscdex/ssh2) package and opens an interactive shell.
 
 No `gcloud` process is spawned, and no "Proxy command" message appears in the terminal.
 
@@ -24,23 +25,17 @@ gcloud auth application-default login
 
 This creates `~/.config/gcloud/application_default_credentials.json`, which the plugin uses to obtain access tokens at runtime.
 
-### 2. SSH key
-
-```bash
-gcloud compute ssh <INSTANCE> --zone=<ZONE> --project=<PROJECT> --tunnel-through-iap
-```
-
-Run this once to generate `~/.ssh/google_compute_engine` and register the public key with your GCP project. After this, the `gcloud` binary is no longer needed.
-
-### 3. IAP permissions
+### 2. IAP permissions
 
 Your Google account must have the **IAP-secured Tunnel User** role (`roles/iap.tunnelResourceAccessor`) on the target resource.
+
+> **SSH key:** No manual key setup is required. The plugin generates `~/.ssh/google_compute_engine` automatically on first connect and registers the public key with your GCP project.
 
 ## Installation
 
 ### Option A — Tabby Plugin Manager (recommended)
 
-If the package is published to npm, search for `tabby-gcp-iap` in **Tabby Settings → Plugins** and click Install. Restart Tabby when prompted.
+Search for `tabby-gcp-iap` in **Tabby Settings → Plugins** and click Install. Restart Tabby when prompted.
 
 ### Option B — From source
 
@@ -89,7 +84,7 @@ Then restart Tabby.
 | Zone | Instance zone | `us-central1-a` |
 | Username | Linux user on the instance | `mzc01-search5` |
 | SSH Port | SSH port (usually 22) | `22` |
-| SSH private key | Path to the gcloud-managed key | `~/.ssh/google_compute_engine` |
+| SSH private key | Path to the SSH key | `~/.ssh/google_compute_engine` |
 
 > **Username tip:** GCP creates the Linux account using your local OS username (output of `whoami`), not your Google email address.
 
@@ -108,6 +103,7 @@ Open Tabby's developer console (**View → Toggle Developer Tools**) to see plug
 src/
 ├── api.ts                              # IAPProfile type (extends ConnectableTerminalProfile)
 ├── iapAuth.ts                          # OAuth2 token from Application Default Credentials
+├── iapKeyManager.ts                    # SSH key generation + GCP registration (metadata / OS Login)
 ├── iapTunnel.ts                        # IAP WebSocket tunnel → Node.js Duplex stream
 ├── iapSession.ts                       # BaseSession implementation (ssh2)
 ├── iapProfileProvider.ts               # ProfileProvider registration
@@ -124,7 +120,7 @@ src/
 
 MIT
 
-Copyright (c) 2026 mz
+Copyright (c) 2026 Ji-Ho Lee
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
