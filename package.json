@@ -12,6 +12,14 @@
     "ssh",
     "google-cloud"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/search5/tabby-gcp-iap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/search5/tabby-gcp-iap/issues"
+  },
+  "homepage": "https://github.com/search5/tabby-gcp-iap#readme",
   "main": "dist/index.js",
   "files": [
     "dist/",
