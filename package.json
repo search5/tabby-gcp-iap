@@ -1,6 +1,6 @@
 {
   "name": "tabby-gcp-iap",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "GCP IAP SSH tunnel plugin for Tabby — no gcloud binary required at runtime",
   "author": "Ji-Ho Lee <search5@gmail.com> (https://flask.moe/tabby-gcp-iap)",
   "license": "MIT",
