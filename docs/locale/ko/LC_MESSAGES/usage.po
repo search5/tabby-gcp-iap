@@ -1,0 +1,215 @@
+# Korean translations for tabby-gcp-iap documentation.
+# Copyright (C) 2026, Ji-Ho Lee
+# This file is distributed under the same license as the tabby-gcp-iap
+# package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tabby-gcp-iap 1.0.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-21 23:38+0900\n"
+"PO-Revision-Date: 2026-07-21 23:38+0900\n"
+"Last-Translator: Ji-Ho Lee <search5@gmail.com>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../usage.rst:2 687b37206ade4a119c631fa98227bee1
+msgid "Usage"
+msgstr "사용법"
+
+#: ../../usage.rst:5 96758671204c49afa4282fa1d609497f
+msgid "Creating a new GCP IAP connection"
+msgstr "새 GCP IAP 연결 만들기"
+
+#: ../../usage.rst:7 763867139ce14e8398e46e6aff508a0e
+msgid "Open Tabby and choose **New tab → GCP IAP SSH**."
+msgstr "Tabby를 열고 **New tab → GCP IAP SSH** 를 선택합니다."
+
+#: ../../usage.rst:8 289f606b4f1c43849fc953fe03c30b5f
+msgid "Fill in the profile settings:"
+msgstr "프로필 설정을 입력합니다:"
+
+#: ../../usage.rst:13 259a012c62994ae19ec97bfda2e0c1a1
+msgid "Field"
+msgstr "필드"
+
+#: ../../usage.rst:14 c6ee7ba59df1401099bdddc65943be9a
+msgid "Description"
+msgstr "설명"
+
+#: ../../usage.rst:15 5f6b68e18f594b708f055e076a8cd2e8
+msgid "Example"
+msgstr "예시"
+
+#: ../../usage.rst:16 e1add44054b246f7a10bcefda074ae42
+msgid "Instance name"
+msgstr "인스턴스 이름"
+
+#: ../../usage.rst:17 3aa598698d734a3a8e4514571bd24201
+msgid "GCE instance name"
+msgstr "GCE 인스턴스 이름"
+
+#: ../../usage.rst:18 fe49a362db0d472c963de544602a8547
+msgid "``my-vm``"
+msgstr "``my-vm``"
+
+#: ../../usage.rst:19 179639986b8d48458b2a9090e4ba3743
+msgid "Project"
+msgstr "프로젝트"
+
+#: ../../usage.rst:20 ee07ebc8d12542eabdb43978576a8891
+msgid "GCP project ID"
+msgstr "GCP 프로젝트 ID"
+
+#: ../../usage.rst:21 2b145b2693c7423caf1a689a02b5d953
+msgid "``my-project-123``"
+msgstr "``my-project-123``"
+
+#: ../../usage.rst:22 af379dbc346e4e1aaea64da62ed0fe50
+msgid "Zone"
+msgstr "영역(Zone)"
+
+#: ../../usage.rst:23 2723a4dafbe24aaaa5ec9ebae7fa13dc
+msgid "Instance zone"
+msgstr "인스턴스가 위치한 영역"
+
+#: ../../usage.rst:24 91c52424d1d04c74a4efe8e53d3b0ea4
+msgid "``us-central1-a``"
+msgstr "``us-central1-a``"
+
+#: ../../usage.rst:25 eefbfd2e5461483aa054f304c5001299
+msgid "Username"
+msgstr "사용자 이름"
+
+#: ../../usage.rst:26 52568f3274a245078c0898752ee38841
+msgid "Linux user on the instance"
+msgstr "인스턴스의 Linux 사용자 계정"
+
+#: ../../usage.rst:27 f729f0e3b936482a937a1b635c888939
+msgid "``mzc01-search5``"
+msgstr "``mzc01-search5``"
+
+#: ../../usage.rst:28 063c3c63932b42d790bde647dd5b44da
+msgid "SSH Port"
+msgstr "SSH 포트"
+
+#: ../../usage.rst:29 3e884cead5354a12acbb2f3946fd0f7c
+msgid "SSH port (usually 22)"
+msgstr "SSH 포트 (보통 22)"
+
+#: ../../usage.rst:30 717a30462a504073a308c5c81ad9e000
+msgid "``22``"
+msgstr "``22``"
+
+#: ../../usage.rst:31 58ba3fa491fb422cb0efe532308206af
+msgid "SSH private key"
+msgstr "SSH 개인 키"
+
+#: ../../usage.rst:32 144631c980d24757871d1bc7a19ed22d
+msgid "Path to the SSH key"
+msgstr "SSH 키 경로"
+
+#: ../../usage.rst:33 129f9444233b4551a77b1780acfce700
+msgid "``~/.ssh/google_compute_engine``"
+msgstr "``~/.ssh/google_compute_engine``"
+
+#: ../../usage.rst:35 d951dcb8f8864da2a7bb20ab630de1ff
+msgid ""
+"Save the profile and connect. On first connect, the plugin transparently "
+"generates and registers the SSH key described in :doc:`prerequisites` — "
+"no extra action is required from you."
+msgstr ""
+"프로필을 저장하고 연결합니다. 첫 연결 시 플러그인이 :doc:`prerequisites` 문서에서 설명한 SSH 키를 "
+"자동으로 생성하고 등록하므로, 별도의 추가 작업은 필요하지 않습니다."
+
+#: ../../usage.rst:41 5e978aa5a56e492689ce94a2501a5203
+msgid ""
+"**Username tip:** GCP derives the Linux account on the instance from your"
+" local OS username (the output of ``whoami`` on the machine running "
+"Tabby), not from your Google account email address. If your connection "
+"fails with an authentication error even though IAP itself let the tunnel "
+"through, double-check that the ``Username`` field matches the actual "
+"Linux account on the VM rather than assuming it matches your Google "
+"identity."
+msgstr ""
+"**사용자 이름 참고:** GCP는 인스턴스의 Linux 계정을 Google 계정 이메일 주소가 아니라 Tabby가 "
+"실행 중인 컴퓨터의 로컬 OS 사용자 이름(``whoami`` 명령의 출력값)을 기준으로 만듭니다. IAP 자체는 "
+"터널을 정상적으로 열었는데도 인증 오류로 연결이 실패한다면, ``Username`` 필드가 Google 계정과 "
+"동일할 것이라고 가정하지 말고 실제 VM의 Linux 계정과 일치하는지 다시 확인하세요."
+
+#: ../../usage.rst:50 fc8b52eafc3a49ccb88336026b01bdb0
+msgid "What happens behind the scenes"
+msgstr "내부적으로 일어나는 일"
+
+#: ../../usage.rst:52 8b3dd2a322ac4b899dfc0e7d71337d90
+msgid "Every connection goes through the same four stages:"
+msgstr "모든 연결은 다음의 동일한 네 단계를 거칩니다:"
+
+#: ../../usage.rst:54 0388ba962b6345c5afa1480a2a871473
+msgid ""
+"**Auth** — the plugin reads your Application Default Credentials and "
+"exchanges/refreshes an OAuth2 access token directly with the Google token"
+" endpoint."
+msgstr ""
+"**인증(Auth)** — 플러그인이 Application Default Credentials를 읽고, Google 토큰 "
+"엔드포인트와 직접 통신하여 OAuth2 액세스 토큰을 교환하거나 갱신합니다."
+
+#: ../../usage.rst:57 3cfcd79f14f5467da6426e3e07b3e94c
+msgid ""
+"**Key management** — if ``~/.ssh/google_compute_engine`` does not already"
+" exist, it is generated, and the public key is registered with your GCP "
+"project through the Compute Engine metadata API (or OS Login, if "
+"enabled)."
+msgstr ""
+"**키 관리(Key management)** — ``~/.ssh/google_compute_engine`` 이 아직 없다면 "
+"생성하고, Compute Engine 메타데이터 API(또는 OS Login이 활성화된 경우 OS Login)를 통해 "
+"공개 키를 GCP 프로젝트에 등록합니다."
+
+#: ../../usage.rst:61 2c96d99c8e74406c9fafb8d750963e34
+msgid ""
+"**Tunnel** — a WebSocket connection is opened to "
+"``tunnel.cloudproxy.app``, speaking the IAP relay subprotocol "
+"(``relay.tunnel.cloudproxy.app``), including its binary DATA / ACK / SID "
+"framing."
+msgstr ""
+"**터널(Tunnel)** — ``tunnel.cloudproxy.app`` 으로 웹소켓 연결을 열어, 바이너리 DATA "
+"/ ACK / SID 프레이밍을 포함한 IAP 릴레이 서브프로토콜(``relay.tunnel.cloudproxy.app``)"
+"로 통신합니다."
+
+#: ../../usage.rst:65 0d7cd113a1b84096b9d4fc542e94116e
+msgid ""
+"**SSH** — an SSH session is driven over that tunnel stream, and an "
+"interactive shell is opened in the Tabby tab."
+msgstr ""
+"**SSH** — 해당 터널 스트림 위에서 SSH 세션을 진행하고, Tabby 탭에 대화형 셸을 엽니다."
+
+#: ../../usage.rst:68 b221f18f9c3e41259da6318fdf5e9925
+msgid ""
+"See :doc:`architecture` for how these stages map onto the plugin's source"
+" files."
+msgstr "이 단계들이 플러그인의 소스 파일과 어떻게 대응되는지는 :doc:`architecture` 문서를 참고하세요."
+
+#: ../../usage.rst:72 299615e72e884f1185e307eb38a0fb82
+msgid "Development workflow"
+msgstr "개발 워크플로우"
+
+#: ../../usage.rst:74 64856f3703614a579266677cad19bc1a
+msgid ""
+"If you are working on the plugin itself (see :doc:`installation`, Method "
+"2), you can iterate with:"
+msgstr ""
+"플러그인 자체를 개발 중이라면(:doc:`installation` 문서의 방법 2 참고), 다음 명령으로 반복 "
+"작업을 할 수 있습니다:"
+
+#: ../../usage.rst:82 ffe3f0ccddae4efbb4a5d3b7cbb691e9
+msgid ""
+"Open Tabby's developer console (**View → Toggle Developer Tools**) to see"
+" the plugin's log output while you work."
+msgstr ""
+"작업하는 동안 플러그인의 로그 출력을 확인하려면 Tabby의 개발자 콘솔(**View → Toggle "
+"Developer Tools**)을 여세요."

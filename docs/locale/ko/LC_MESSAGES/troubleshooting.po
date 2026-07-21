@@ -1,0 +1,181 @@
+# Korean translations for tabby-gcp-iap documentation.
+# Copyright (C) 2026, Ji-Ho Lee
+# This file is distributed under the same license as the tabby-gcp-iap
+# package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tabby-gcp-iap 1.0.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-21 23:38+0900\n"
+"PO-Revision-Date: 2026-07-21 23:38+0900\n"
+"Last-Translator: Ji-Ho Lee <search5@gmail.com>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../troubleshooting.rst:2 b2644c0c619e422a9959d638c5f37b68
+msgid "Troubleshooting & FAQ"
+msgstr "문제 해결 & FAQ"
+
+#: ../../troubleshooting.rst:5 cabec43dcdf04e1f897777618f9f8e17
+msgid "Application Default Credentials expired or missing"
+msgstr "Application Default Credentials가 만료되었거나 없는 경우"
+
+#: ../../troubleshooting.rst:7 7a9622cee84f4d688bde80dc51d3582f
+msgid ""
+"**Symptom:** the connection fails immediately with an authentication or "
+"token-refresh error, and no tunnel is ever opened."
+msgstr ""
+"**증상:** 연결이 즉시 인증 오류 또는 토큰 갱신 오류로 실패하며, 터널이 전혀 열리지 않습니다."
+
+#: ../../troubleshooting.rst:10 1eb4507b74374ddb8a5505b12d865e98
+msgid ""
+"**Cause:** the plugin reads "
+"``~/.config/gcloud/application_default_credentials.json`` and refreshes "
+"an OAuth2 access token from it on every connection. If this file is "
+"missing, malformed, or its refresh token has been revoked or expired, "
+"token refresh fails before the plugin ever reaches the IAP tunnel."
+msgstr ""
+"**원인:** 플러그인은 연결할 때마다 "
+"``~/.config/gcloud/application_default_credentials.json`` 파일을 읽어 OAuth2 "
+"액세스 토큰을 갱신합니다. 이 파일이 없거나, 형식이 올바르지 않거나, 리프레시 토큰이 취소되었거나 만료된 경우 "
+"플러그인이 IAP 터널에 도달하기도 전에 토큰 갱신이 실패합니다."
+
+#: ../../troubleshooting.rst:16 3eac16bc74034779be0164d152f7a2a7
+msgid "**Fix:** re-run the login step from :doc:`prerequisites`:"
+msgstr "**해결 방법:** :doc:`prerequisites` 문서의 로그인 단계를 다시 실행하세요:"
+
+#: ../../troubleshooting.rst:22 9416d448402a479b8268d863103534d1
+msgid "Then retry the connection."
+msgstr "그런 다음 연결을 다시 시도하세요."
+
+#: ../../troubleshooting.rst:25 645ca9905f4b48699233360c38065dbf
+msgid "403 / permission denied when opening the tunnel"
+msgstr "터널을 열 때 403 / 권한 거부 오류가 발생하는 경우"
+
+#: ../../troubleshooting.rst:27 2dea852a9b684bdd98302929aee41ce5
+msgid ""
+"**Symptom:** authentication succeeds (a token is obtained), but opening "
+"the tunnel itself fails with a 403 or \"permission denied\" style error."
+msgstr ""
+"**증상:** 인증은 성공하지만(토큰은 정상적으로 발급되지만), 터널을 여는 과정에서 403 또는 \"권한 거부\" "
+"형태의 오류가 발생합니다."
+
+#: ../../troubleshooting.rst:30 a9c89d708ac4411787c5d3fd430019cb
+msgid ""
+"**Cause:** your account is missing the IAP IAM role required to open a "
+"tunnel to the target instance."
+msgstr ""
+"**원인:** 대상 인스턴스에 터널을 열기 위해 필요한 IAP IAM 역할이 계정에 부여되어 있지 않습니다."
+
+#: ../../troubleshooting.rst:33 23da0bd59b4e4753a34c6ab26c377173
+msgid ""
+"**Fix:** grant yourself (or the relevant service account) the **IAP-"
+"secured Tunnel User** role, ``roles/iap.tunnelResourceAccessor``, on the "
+"project or instance, as described in :doc:`prerequisites`. Confirm with "
+"your GCP project administrator if you don't have IAM permissions "
+"yourself."
+msgstr ""
+"**해결 방법:** :doc:`prerequisites` 문서에서 설명한 대로, 해당 프로젝트 또는 인스턴스에 대해 "
+"본인(또는 해당 서비스 계정)에게 **IAP로 보호되는 터널 사용자** 역할인 "
+"``roles/iap.tunnelResourceAccessor`` 를 부여하세요. 스스로 IAM 권한을 변경할 수 없다면 "
+"GCP 프로젝트 관리자에게 확인을 요청하세요."
+
+#: ../../troubleshooting.rst:39 a4e1702af228415f96acae7d8d277417
+msgid "Confirming the plugin actually loaded"
+msgstr "플러그인이 실제로 로드되었는지 확인하는 방법"
+
+#: ../../troubleshooting.rst:41 844d30d8cbaf42aa87ebd2913dd31203
+msgid ""
+"**Symptom:** the \"GCP IAP SSH\" tab type doesn't appear, or connections "
+"behave unexpectedly, and you're not sure whether the plugin is even "
+"loaded."
+msgstr ""
+"**증상:** \"GCP IAP SSH\" 탭 유형이 나타나지 않거나 연결이 예상과 다르게 동작하여, 플러그인이 "
+"제대로 로드되었는지 확신할 수 없습니다."
+
+#: ../../troubleshooting.rst:44 cd71067cb6f6476a8b32afd72cd995f0
+msgid ""
+"**Fix:** open **View → Toggle Developer Tools** in Tabby and check the "
+"console for:"
+msgstr ""
+"**해결 방법:** Tabby에서 **View → Toggle Developer Tools** 를 열고 콘솔에서 다음 메시지를 "
+"확인하세요:"
+
+#: ../../troubleshooting.rst:51 6bceccb25d6f4fd6998500f72fe41f41
+msgid ""
+"If this line is missing, the plugin failed to load — check that it was "
+"installed into the correct plugin directory for your OS (see "
+":doc:`installation`) and that Tabby was fully restarted afterwards."
+msgstr ""
+"이 메시지가 보이지 않는다면 플러그인 로드가 실패한 것입니다. 사용 중인 OS에 맞는 올바른 플러그인 "
+"디렉터리에 설치되었는지(:doc:`installation` 참고), 그리고 이후 Tabby를 완전히 재시작했는지 "
+"확인하세요."
+
+#: ../../troubleshooting.rst:56 e22de7099c0042b79fdbdaa3edf00785
+msgid "SSH connects but the username is rejected"
+msgstr "SSH는 연결되지만 사용자 이름이 거부되는 경우"
+
+#: ../../troubleshooting.rst:58 593a6f88ccd440b9929352e3adbef8bf
+msgid ""
+"**Symptom:** the IAP tunnel opens successfully, but the SSH handshake "
+"fails, or you land on an unexpected account."
+msgstr ""
+"**증상:** IAP 터널은 정상적으로 열리지만 SSH 핸드셰이크가 실패하거나, 예상하지 못한 계정으로 접속됩니다."
+
+#: ../../troubleshooting.rst:61 c4b9f9cb1ae34571b0c773a83e6e283f
+msgid ""
+"**Cause:** GCP derives the Linux account on the instance from the local "
+"**OS username** of the machine running Tabby (the output of ``whoami``), "
+"not from your Google account's email address. If you filled in the "
+"``Username`` field in the profile using your Google email or a guessed "
+"name, it likely won't match."
+msgstr ""
+"**원인:** GCP는 인스턴스의 Linux 계정을 Google 계정의 이메일 주소가 아니라 Tabby가 실행 중인 "
+"컴퓨터의 로컬 **OS 사용자 이름** (``whoami`` 명령의 출력값)을 기준으로 만듭니다. 프로필의 "
+"``Username`` 필드에 Google 이메일이나 임의로 추측한 이름을 입력했다면 일치하지 않을 가능성이 "
+"높습니다."
+
+#: ../../troubleshooting.rst:67 766c6831e69b482e87abc8bbdc19d702
+msgid ""
+"**Fix:** set the ``Username`` field (see :doc:`usage`) to the actual "
+"Linux account on the target instance — typically the same value "
+"``whoami`` prints locally, unless your organization uses a custom OS "
+"Login mapping."
+msgstr ""
+"**해결 방법:** (:doc:`usage` 참고) ``Username`` 필드를 대상 인스턴스의 실제 Linux "
+"계정으로 설정하세요. 조직에서 별도의 OS Login 매핑을 사용하지 않는 한, 일반적으로 로컬에서 "
+"``whoami`` 가 출력하는 값과 동일합니다."
+
+#: ../../troubleshooting.rst:72 d55698ef093f41d0a09a0517f3759f0d
+msgid "The plugin doesn't update after ``git pull``"
+msgstr "``git pull`` 후에도 플러그인이 업데이트되지 않는 경우"
+
+#: ../../troubleshooting.rst:74 a41401ef3df54e0b900da1222c9bdf3e
+msgid ""
+"**Symptom:** you pulled the latest source changes, but Tabby still "
+"behaves like the old version."
+msgstr ""
+"**증상:** 최신 소스 변경 사항을 받아왔지만, Tabby는 여전히 이전 버전처럼 동작합니다."
+
+#: ../../troubleshooting.rst:77 9c407c2c957c466f93ca28b45bc2e765
+msgid ""
+"**Cause:** installing from source requires an explicit rebuild and "
+"redeploy step — pulling new source alone does not update the files Tabby "
+"actually loads."
+msgstr ""
+"**원인:** 소스에서 설치하는 경우 명시적인 재빌드 및 재배포 단계가 필요합니다. 새 소스를 받아오는 "
+"것만으로는 Tabby가 실제로 불러오는 파일이 갱신되지 않습니다."
+
+#: ../../troubleshooting.rst:81 12a7668cf6b74068ab70b597eeb4b426
+msgid "**Fix:** run the full update sequence from :doc:`installation`:"
+msgstr "**해결 방법:** :doc:`installation` 문서에 나온 전체 업데이트 절차를 실행하세요:"
+
+#: ../../troubleshooting.rst:89 f3e1d7713d5c4d768f3210feeec453ac
+msgid "Then fully restart Tabby (not just reload the window)."
+msgstr "그런 다음 (창만 새로고침하지 말고) Tabby를 완전히 재시작하세요."

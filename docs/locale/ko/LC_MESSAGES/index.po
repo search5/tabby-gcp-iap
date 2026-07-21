@@ -1,0 +1,63 @@
+# Korean translations for tabby-gcp-iap documentation.
+# Copyright (C) 2026, Ji-Ho Lee
+# This file is distributed under the same license as the tabby-gcp-iap
+# package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tabby-gcp-iap 1.0.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-21 23:38+0900\n"
+"PO-Revision-Date: 2026-07-21 23:38+0900\n"
+"Last-Translator: Ji-Ho Lee <search5@gmail.com>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../index.rst:15
+msgid "Contents"
+msgstr "목차"
+
+#: ../../index.rst:2 baf717feb92b47ffa552708a41682c1e
+msgid "tabby-gcp-iap documentation"
+msgstr "tabby-gcp-iap 문서"
+
+#: ../../index.rst:4 5d3c8e6d77594503a03f9c08365a6a87
+msgid ""
+"A `Tabby <https://tabby.sh>`_ plugin that connects to Google Cloud "
+"Platform VM instances over `Identity-Aware Proxy (IAP) TCP forwarding "
+"<https://cloud.google.com/iap/docs/using-tcp-forwarding>`_ — without "
+"depending on the ``gcloud`` CLI at runtime."
+msgstr ""
+"`Identity-Aware Proxy (IAP) TCP 포워딩 "
+"<https://cloud.google.com/iap/docs/using-tcp-forwarding>`_ 을 통해 Google "
+"Cloud Platform VM 인스턴스에 접속하는 `Tabby <https://tabby.sh>`_ 플러그인입니다. "
+"런타임에 ``gcloud`` CLI에 의존하지 않습니다."
+
+#: ../../index.rst:9 ab73377ec0544c80b34fad5932197739
+msgid ""
+"The plugin implements the full IAP tunnel protocol natively: it talks "
+"directly to the Google OAuth2 token endpoint and to the IAP WebSocket "
+"relay, generates and registers its own temporary SSH key, and drives an "
+"interactive SSH session over the tunnel — all without ever spawning a "
+"``gcloud`` subprocess."
+msgstr ""
+"이 플러그인은 IAP 터널 프로토콜 전체를 직접 구현합니다. Google OAuth2 토큰 엔드포인트와 IAP 웹소켓 "
+"릴레이에 직접 통신하고, 임시 SSH 키를 자체적으로 생성 및 등록한 뒤, 해당 터널을 통해 대화형 SSH 세션을 "
+"진행합니다 — 이 과정에서 ``gcloud`` 하위 프로세스는 전혀 실행되지 않습니다."
+
+#: ../../index.rst:26 e5ff6614a94940f382e515b5ac6998a8
+msgid "Indices and tables"
+msgstr "색인 및 표"
+
+#: ../../index.rst:28 1893deb34fa646ae8df63484aad42d9c
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../index.rst:29 a23d33344d104b1e95c48e204d698d7c
+msgid ":ref:`search`"
+msgstr ":ref:`search`"

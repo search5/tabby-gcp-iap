@@ -1,0 +1,178 @@
+# Korean translations for tabby-gcp-iap documentation.
+# Copyright (C) 2026, Ji-Ho Lee
+# This file is distributed under the same license as the tabby-gcp-iap
+# package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tabby-gcp-iap 1.0.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-21 23:52+0900\n"
+"PO-Revision-Date: 2026-07-21 23:38+0900\n"
+"Last-Translator: Ji-Ho Lee <search5@gmail.com>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../installation.rst:2 89d52d0dbf114e0abf9b1d18411b09d8
+msgid "Installation"
+msgstr "설치"
+
+#: ../../installation.rst:4 953a9000bd49455ebed2e1ebe0b2e866
+msgid "Make sure you have completed the steps in :doc:`prerequisites` first."
+msgstr "먼저 :doc:`prerequisites` 문서의 단계를 모두 완료했는지 확인하세요."
+
+#: ../../installation.rst:6 db454e83bab74b70ace31bd82d775c72
+msgid ""
+"**tabby-gcp-iap** can be installed in two ways: directly from within "
+"Tabby, or by cloning the source repository and building it yourself."
+msgstr ""
+"**tabby-gcp-iap** 는 두 가지 방법으로 설치할 수 있습니다: Tabby 내에서 직접 설치하거나, 소스 저장소를 "
+"복제하여 직접 빌드하는 방법입니다."
+
+#: ../../installation.rst:10 737d48e6e5914ce4b3fc7917ef604383
+msgid "Method 1 — Install from the Tabby Plugin Manager"
+msgstr "방법 1 — Tabby 플러그인 매니저에서 설치"
+
+#: ../../installation.rst:12 f09d621a9fac4a0e84d6859d47ee6827
+msgid "This is the recommended method for most users."
+msgstr "대부분의 사용자에게 권장되는 방법입니다."
+
+#: ../../installation.rst:14 9b5501a4b41749ad936b4aa56cd8023b
+msgid "Open Tabby and go to **Settings → Plugins**."
+msgstr "Tabby를 열고 **Settings → Plugins** 로 이동합니다."
+
+#: ../../installation.rst:15 fd9abd9ded9d4faf8352cf79f26d3ec9
+msgid "In the search box, search for ``gcp-iap``."
+msgstr "검색창에 ``gcp-iap`` 를 입력하여 검색합니다."
+
+#: ../../installation.rst:16 db30b414e15c4293942becfc465b6727
+msgid "Click **Install**, then restart Tabby when prompted."
+msgstr "**Install** 을 클릭한 뒤, 안내가 나오면 Tabby를 재시작합니다."
+
+#: ../../installation.rst:19 02a684b5ecf34d50a7289272440aed9e
+msgid "Method 2 — Clone the Git repository and build from source"
+msgstr "방법 2 — Git 저장소를 복제하여 직접 소스에서 빌드"
+
+#: ../../installation.rst:21 ba1d6aff8f2e41409f337096fd6dc023
+msgid ""
+"Use this method if you want to build from a specific commit, contribute "
+"to the plugin, or install it on a machine without access to the Tabby "
+"Plugin Manager."
+msgstr ""
+"특정 커밋을 기준으로 빌드하거나, 플러그인 개발에 기여하거나, Tabby 플러그인 매니저에 접근할 수 없는 환경에 설치하려는 경우 "
+"이 방법을 사용하세요."
+
+#: ../../installation.rst:25 d92c7b7096e74025a315699fafe6e954
+msgid "**Requirements:** `Node.js <https://nodejs.org/>`_ 18 or later."
+msgstr "**요구 사항:** `Node.js <https://nodejs.org/>`_ 18 이상."
+
+#: ../../installation.rst:35 964ae684d0ce47d19bebe025e402d64b
+msgid ""
+"``npm run install-plugin`` detects your operating system and copies the "
+"built files to the correct Tabby plugin directory automatically:"
+msgstr ""
+"``npm run install-plugin`` 명령은 운영체제를 자동으로 감지하여 빌드된 파일을 올바른 Tabby 플러그인 "
+"디렉터리에 복사합니다:"
+
+#: ../../installation.rst:41 69a67a454e8c4a08a754b7a609cab1da
+msgid "OS"
+msgstr "OS"
+
+#: ../../installation.rst:42 a2526f681d114b1cb607fd5295dc0f91
+msgid "Plugin directory"
+msgstr "플러그인 디렉터리"
+
+#: ../../installation.rst:43 29439c4d64874ecdbf95e524c79b2f61
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../installation.rst:44 1300e29b441b4f1ea805302fc84a3544
+msgid ""
+"``~/Library/Application Support/tabby/plugins/node_modules/tabby-gcp-"
+"iap/``"
+msgstr ""
+"``~/Library/Application Support/tabby/plugins/node_modules/tabby-gcp-"
+"iap/``"
+
+#: ../../installation.rst:45 ce36c5f30f6d4a87b14353b20217c34e
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../installation.rst:46 fdae1fd7ab1d41dcbfaeb32c5fbed64b
+msgid "``~/.config/tabby/plugins/node_modules/tabby-gcp-iap/``"
+msgstr "``~/.config/tabby/plugins/node_modules/tabby-gcp-iap/``"
+
+#: ../../installation.rst:47 7c9364548843453597205c5a235d8689
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../installation.rst:48 b1231c46728c4cd0b2b9f2e5cb61fabd
+msgid "``%APPDATA%\\tabby\\plugins\\node_modules\\tabby-gcp-iap\\``"
+msgstr "``%APPDATA%\\tabby\\plugins\\node_modules\\tabby-gcp-iap\\``"
+
+#: ../../installation.rst:50 47e43e6007b24678a0b1dc94ca23d8d1
+msgid ""
+"Restart Tabby after installation. To confirm the plugin loaded, open "
+"**View → Toggle Developer Tools** and look for the following line in the "
+"console:"
+msgstr ""
+"설치 후 Tabby를 재시작하세요. 플러그인이 로드되었는지 확인하려면 **View → Toggle Developer Tools** "
+"를 열고 콘솔에서 다음 줄을 확인하세요:"
+
+#: ../../installation.rst:58 fece7337ed4640068fe339837947dbc7
+msgid "If you don't see it, see :doc:`troubleshooting`."
+msgstr "이 메시지가 보이지 않는다면 :doc:`troubleshooting` 문서를 참고하세요."
+
+#: ../../installation.rst:61 88cf06a4e3d64f3180404d61fc8c069a
+msgid "Updating"
+msgstr "업데이트"
+
+#: ../../installation.rst:63 e3172fe458424e45a8a83b936b0c0023
+msgid ""
+"If you installed from source (Method 2), keep the plugin up to date by "
+"pulling the latest changes and rebuilding:"
+msgstr "방법 2(소스 설치)로 설치했다면, 최신 변경 사항을 받아오고 다시 빌드하여 플러그인을 최신 상태로 유지하세요:"
+
+#: ../../installation.rst:72 f8f9200cc7e74b6db3d6dba78e268509
+msgid "Then restart Tabby."
+msgstr "그런 다음 Tabby를 재시작하세요."
+
+#: ../../installation.rst:74 544d07dae245475db6159c7cdbc1b893
+msgid ""
+"If you installed via the Plugin Manager (Method 1), Tabby will surface "
+"available updates for ``gcp-iap`` in **Settings → Plugins** the same way "
+"it does for any other plugin."
+msgstr ""
+"플러그인 매니저(방법 1)로 설치했다면, 다른 플러그인과 마찬가지로 Tabby가 **Settings → Plugins** 에서 "
+"``gcp-iap`` 의 업데이트 가능 여부를 자동으로 표시해 줍니다."
+
+#: ../../installation.rst:78 ce20f39fdb754c90aab764d61e53c650
+msgid "Once installed, continue to :doc:`usage`."
+msgstr "설치를 완료했다면 :doc:`usage` 문서로 계속 진행하세요."
+
+#~ msgid ""
+#~ "The npm package for this plugin is"
+#~ " published as ``tabby-gcp-iap``, "
+#~ "which starts with the ``tabby-`` prefix"
+#~ " that every Tabby plugin uses. "
+#~ "Tabby's in-app Plugin Manager search "
+#~ "box strips this common prefix before "
+#~ "matching, so searching for the full "
+#~ "name ``tabby-gcp-iap`` may not "
+#~ "find it. Search for **``gcp-iap``** "
+#~ "instead."
+#~ msgstr ""
+#~ "이 플러그인의 npm 패키지는 모든 Tabby 플러그인이"
+#~ " 사용하는 접두사인 ``tabby-`` 로 시작하는 "
+#~ "``tabby-gcp-iap`` 라는 이름으로 배포됩니다. "
+#~ "Tabby 앱 내의 플러그인 매니저 검색창은 검색 "
+#~ "시 이 공통 접두사를 제거한 뒤 비교하기 때문에,"
+#~ " 전체 이름인 ``tabby-gcp-iap`` 로 "
+#~ "검색하면 찾지 못할 수 있습니다. 대신 ``gcp-"
+#~ "iap`` 로 검색하세요."
+

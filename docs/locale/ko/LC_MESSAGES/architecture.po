@@ -1,0 +1,180 @@
+# Korean translations for tabby-gcp-iap documentation.
+# Copyright (C) 2026, Ji-Ho Lee
+# This file is distributed under the same license as the tabby-gcp-iap
+# package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tabby-gcp-iap 1.0.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-21 23:38+0900\n"
+"PO-Revision-Date: 2026-07-21 23:38+0900\n"
+"Last-Translator: Ji-Ho Lee <search5@gmail.com>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../architecture.rst:2 29704dd8e31f43d19550c4b4b9cb3db4
+msgid "Architecture"
+msgstr "아키텍처"
+
+#: ../../architecture.rst:5 b6b713bf8a364f9e97be712593d55849
+msgid "Source layout"
+msgstr "소스 구조"
+
+#: ../../architecture.rst:7 8a9d653d59e24b4fad536731fc9f996a
+msgid "All of the plugin's logic lives under ``src/``:"
+msgstr "플러그인의 모든 로직은 ``src/`` 아래에 있습니다:"
+
+#: ../../architecture.rst:13 95762e8eb9264df9bffd48f6a6b80b40
+msgid "File"
+msgstr "파일"
+
+#: ../../architecture.rst:14 c2b6d99b83ea4d47996e87a0cbef01a6
+msgid "Responsibility"
+msgstr "역할"
+
+#: ../../architecture.rst:15 723e08edbe504fe6a83ebc378376dfcd
+msgid "``api.ts``"
+msgstr "``api.ts``"
+
+#: ../../architecture.rst:16 e5d7f06f7f98485caa29aa465cd28d7e
+msgid ""
+"Defines the ``IAPProfile`` type, extending Tabby's "
+"``ConnectableTerminalProfile``."
+msgstr ""
+"Tabby의 ``ConnectableTerminalProfile`` 을 확장한 ``IAPProfile`` 타입을 정의합니다."
+
+#: ../../architecture.rst:18 8454c2ed5e7645dba8c8d29c639e46b3
+msgid "``iapAuth.ts``"
+msgstr "``iapAuth.ts``"
+
+#: ../../architecture.rst:19 3ce252d92ca74c298a68b8c0e804de70
+msgid ""
+"Obtains an OAuth2 access token from Application Default Credentials by "
+"talking to the Google token endpoint directly."
+msgstr ""
+"Google 토큰 엔드포인트와 직접 통신하여 Application Default Credentials로부터 OAuth2 "
+"액세스 토큰을 얻습니다."
+
+#: ../../architecture.rst:21 a5f662a769a54c3e932cec3f6210afe5
+msgid "``iapKeyManager.ts``"
+msgstr "``iapKeyManager.ts``"
+
+#: ../../architecture.rst:22 c09649f1ff0f4854962bba3084027d5c
+msgid ""
+"Generates the ``google_compute_engine`` SSH key pair and registers the "
+"public key with GCP, via either instance/project metadata or OS Login."
+msgstr ""
+"``google_compute_engine`` SSH 키 쌍을 생성하고, 인스턴스/프로젝트 메타데이터 또는 OS "
+"Login을 통해 공개 키를 GCP에 등록합니다."
+
+#: ../../architecture.rst:25 4019e42782994c45a9e97e5675720d9c
+msgid "``iapTunnel.ts``"
+msgstr "``iapTunnel.ts``"
+
+#: ../../architecture.rst:26 ff5d0244aa384fde88020932bfbe9ced
+msgid ""
+"Opens the IAP WebSocket tunnel and exposes it as a Node.js ``Duplex`` "
+"stream."
+msgstr "IAP 웹소켓 터널을 열고 이를 Node.js ``Duplex`` 스트림으로 노출합니다."
+
+#: ../../architecture.rst:28 e6a310b21808469a906f4986aa888280
+msgid "``iapSession.ts``"
+msgstr "``iapSession.ts``"
+
+#: ../../architecture.rst:29 95793c3ec69541e2aacc63f3adad96f3
+msgid ""
+"Implements Tabby's ``BaseSession`` on top of ``ssh2``, driving the SSH "
+"protocol over the tunnel stream."
+msgstr ""
+"``ssh2`` 위에 Tabby의 ``BaseSession`` 을 구현하여 터널 스트림 위에서 SSH 프로토콜을 "
+"진행합니다."
+
+#: ../../architecture.rst:31 424603dc0f0b49db95bfac4cc771419d
+msgid "``iapProfileProvider.ts``"
+msgstr "``iapProfileProvider.ts``"
+
+#: ../../architecture.rst:32 1c68214f543845cf87b77260e8e36604
+msgid ""
+"Registers the plugin's ``ProfileProvider`` with Tabby so the \"GCP IAP "
+"SSH\" profile type appears in the UI."
+msgstr ""
+"플러그인의 ``ProfileProvider`` 를 Tabby에 등록하여 \"GCP IAP SSH\" 프로필 유형이 UI에 "
+"표시되도록 합니다."
+
+#: ../../architecture.rst:34 2caee86792544cdf9b91a2b8a3b6a34b
+msgid "``index.ts``"
+msgstr "``index.ts``"
+
+#: ../../architecture.rst:35 266018ac1a4e46819138efc074a97f66
+msgid "The plugin's Angular ``NgModule`` entry point."
+msgstr "플러그인의 Angular ``NgModule`` 진입점입니다."
+
+#: ../../architecture.rst:36 315d2a84f7ad4f61b16b214d3662dfef
+msgid "``components/iapProfileSettings.component.ts``"
+msgstr "``components/iapProfileSettings.component.ts``"
+
+#: ../../architecture.rst:37 3225a80dde394a12b471869a19b1fbcd
+msgid ""
+"The profile settings form (instance, project, zone, username, port, key "
+"path)."
+msgstr "프로필 설정 폼(인스턴스, 프로젝트, 영역, 사용자 이름, 포트, 키 경로)입니다."
+
+#: ../../architecture.rst:39 04127f7ef6ff40439ad629ca5062bf62
+msgid "``components/iapTab.component.ts``"
+msgstr "``components/iapTab.component.ts``"
+
+#: ../../architecture.rst:40 3dda5928c8814c5b9d55932e82c7122c
+msgid ""
+"The terminal tab component, extending Tabby's "
+"``ConnectableTerminalTabComponent``."
+msgstr ""
+"Tabby의 ``ConnectableTerminalTabComponent`` 를 확장한 터미널 탭 컴포넌트입니다."
+
+#: ../../architecture.rst:44 7a095a7c9fe448948f01b2347f25e329
+msgid "Request flow"
+msgstr "요청 흐름"
+
+#: ../../architecture.rst:46 9d46d2f0bd964af59969cdc47094284a
+msgid "The four stages described in :doc:`usage` map directly onto these files:"
+msgstr ":doc:`usage` 문서에서 설명한 네 단계는 다음 파일들과 직접적으로 대응됩니다:"
+
+#: ../../architecture.rst:67 c2bbea1707cd4f429297eba552a328c0
+msgid ""
+"No step in this chain invokes the ``gcloud`` binary; everything from "
+"token refresh to the tunnel's binary framing (DATA / ACK / SID) is "
+"implemented natively in TypeScript."
+msgstr ""
+"이 흐름의 어떤 단계에서도 ``gcloud`` 바이너리를 호출하지 않습니다. 토큰 갱신부터 터널의 바이너리 "
+"프레이밍(DATA / ACK / SID)까지 모든 것이 TypeScript로 직접 구현되어 있습니다."
+
+#: ../../architecture.rst:72 b8b1c8e726bc40dcb545b30509f17616
+msgid "Bundled dependencies"
+msgstr "번들에 포함된 의존성"
+
+#: ../../architecture.rst:74 7d460dbecfed46acb06da67d190ade39
+msgid "The plugin bundles exactly two runtime libraries into its webpack build:"
+msgstr "이 플러그인은 webpack 빌드에 정확히 두 개의 런타임 라이브러리만 번들로 포함합니다:"
+
+#: ../../architecture.rst:76 3a1cac5a5cb44ef79e3d08022afdef26
+msgid "``ws`` — WebSocket client used for the IAP tunnel connection."
+msgstr "``ws`` — IAP 터널 연결에 사용되는 웹소켓 클라이언트입니다."
+
+#: ../../architecture.rst:77 92b3823765434f8e973edaab7e780cb5
+msgid "``ssh2`` — SSH client used to drive the session once the tunnel is open."
+msgstr "``ssh2`` — 터널이 열린 후 세션을 진행하는 데 사용되는 SSH 클라이언트입니다."
+
+#: ../../architecture.rst:79 877247d58f794851b1b46c620a3b945a
+msgid ""
+"Together they add roughly **380 KB** to the bundle. Beyond these two "
+"libraries, the plugin has **no runtime dependencies** other than what "
+"Tabby itself provides (Angular, Tabby's core APIs, etc.)."
+msgstr ""
+"두 라이브러리를 합쳐 번들 크기가 약 **380 KB** 늘어납니다. 이 두 라이브러리 외에는, Tabby 자체가 "
+"제공하는 것(Angular, Tabby의 코어 API 등)을 제외하고 플러그인에는 **런타임 의존성이 전혀 "
+"없습니다.**"
