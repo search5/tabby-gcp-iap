@@ -35,6 +35,7 @@ gettext_uuid = True
 
 html_theme = "sphinx_book_theme"
 html_static_path = ["_static"]
+html_js_files = ["custom.js"]
 html_title = f"{project} Documentation"
 
 html_theme_options = {
@@ -68,7 +69,7 @@ epub_show_urls = "footnote"
 # has no meaningful MIME type for an EPUB package, and doctree caches are
 # not content either -- exclude both from the "unpackaged file" scan so
 # the epub builder doesn't warn about them.
-epub_exclude_files = ["_static/switcher.json"]
+epub_exclude_files = ["_static/switcher.json", "_static/custom.js"]
 
 
 # -- Dynamic per-language titles (HTML tab title + EPUB title) -----------------

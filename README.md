@@ -37,14 +37,14 @@ Your Google account must have the **IAP-secured Tunnel User** role (`roles/iap.t
 
 ### Option A — Tabby Plugin Manager (recommended)
 
-Search for `tabby-gcp-iap` in **Tabby Settings → Plugins** and click Install. Restart Tabby when prompted.
+Search for `gcp-iap` in **Tabby Settings → Plugins** and click Install. Restart Tabby when prompted.
 
 ### Option B — From source
 
 **Requirements:** [Node.js](https://nodejs.org/) 18 or later
 
 ```bash
-git clone <this-repo>
+git clone https://github.com/search5/tabby-gcp-iap.git
 cd tabby-gcp-iap
 npm install
 npm run build
