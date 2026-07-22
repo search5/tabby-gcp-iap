@@ -17,6 +17,8 @@ The plugin implements the full IAP tunnel protocol natively:
 
 No `gcloud` process is spawned, and no "Proxy command" message appears in the terminal.
 
+**Tab recovery** — if Tabby restarts, open IAP tabs reopen automatically and reconnect to the same instance, with the terminal scrollback restored.
+
 ## Prerequisites
 
 The following one-time setup is required before using the plugin:
